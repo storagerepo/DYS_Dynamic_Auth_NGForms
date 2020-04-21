@@ -1,0 +1,848 @@
+{
+  "RegisterIndia": [
+    {
+      "key": "FormProperties",
+      "FormCaption": "Register",
+      "ButtonValue": "Register"
+    },
+    {
+      "key": "Name",
+      "label": "Full Name",
+      "value": "",
+      "type": "text",
+      "class": "col-12",
+      "placeholder": "Full Name",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ],
+      "maxlength": "100"
+    },
+    {
+      "key": "email",
+      "label": "Email",
+      "value": "",
+      "type": "email",
+      "class": "col-12",
+      "placeholder": "Email Id",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validateEmail"
+        }
+      ]
+    },
+    {
+      "key": "dob",
+      "class": "col-12",
+      "label": "Date Of Birth",
+      "value": "",
+      "type": "picker",
+      "placeholder": "Date Of Birth",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "class": "col-12",
+      "value": "",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Male",
+          "text": "Male"
+        },
+        {
+          "value": "Female",
+          "text": "Female"
+        },
+        {
+          "value": "Others",
+          "text": "Others"
+        }
+      ],
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "phonenumber",
+      "label": "Phone Number",
+      "value": "",
+      "type": "number",
+      "class": "col-12",
+      "placeholder": "Phone Number",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validateMobileInd"
+        }
+      ]
+    },
+    {
+      "key": "password",
+      "label": "Password",
+      "value": "",
+      "type": "password",
+      "class": "col-12",
+      "placeholder": "Password",
+      "passwordHint" : "<b>Note: </b><i>Password should have uppercase, lowercase, number and atleast one of these special characters</i><span class='hint'> ! @ # $ *</span>",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validatePasswordPattern"
+        }
+      ]
+    },
+    {
+      "key": "confirmPassword",
+      "label": "Confirm Password",
+      "value": "",
+      "type": "password",
+      "class": "col-12",
+      "placeholder": "Confirm Password",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validatePasswordPattern"
+        }
+      ]
+    },
+    {
+      "key": "Address",
+      "label": "Address",
+      "value": "",
+      "type": "textarea",
+      "class": "col-12",
+      "placeholder": "Address",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "staticmethod",
+          "validatiors": [
+            {
+              "methodName": "minLength",
+              "methodValue": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "city",
+      "label": "City ",
+      "value": "",
+      "type": "text",
+      "class": "col-12",
+      "placeholder": "City",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "state",
+      "label": "State",
+      "value": "",
+      "type": "select",
+      "class": "col-12",
+      "options": [
+        {
+          "value": "",
+          "text": "--select--"
+        }
+      ],
+      "placeholder": "State",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "zipcode",
+      "label": "Zip/Postal Code",
+      "class": "col-12",
+      "value": "",
+      "type": "text",
+      "placeholder": "Zip/Postal Code",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validateZipCodeInd"
+        }
+      ],
+      "maxlength": "6"
+    },
+    {
+      "key": "terms_and_conditions",
+      "label": "Terms and Conditions",
+      "class": "col-12",
+      "value": false,
+      "type": "singleCheckbox",
+      "options": {
+        "text": "I agree to the Terms and Conditions"
+      },
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "requiredTrue"
+        }
+      ]
+    }
+  ],
+  "RegisterUS": [
+    {
+      "key": "FormProperties",
+      "FormCaption": "Register",
+      "ButtonValue": "Register"
+    },
+    {
+      "key": "firstName",
+      "label": "First/Given Name",
+      "value": "",
+      "type": "text",
+      "placeholder": "First/Given Name",
+      "class": "col-12 col-md-4",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "middleName",
+      "label": "Middle Name",
+      "value": "",
+      "type": "text",
+      "placeholder": "Middle Name",
+      "class": "col-12 col-md-4",
+      "validation": []
+    },
+    {
+      "key": "lastName",
+      "class": "col-12 col-md-4",
+      "label": "Family/Sur/Last Name",
+      "value": "",
+      "type": "text",
+      "placeholder": "Family/Sur/Last Name",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "email",
+      "label": "Email",
+      "value": "",
+      "type": "email",
+      "placeholder": "Email Id",
+      "class": "col-12",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validateEmail"
+        }
+      ]
+    },
+    {
+      "key": "dob",
+      "label": "Date Of Birth",
+      "value": "",
+      "type": "picker",
+      "class": "col-12",
+      "placeholder": "Date Of Birth",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "class": "col-12",
+      "value": "",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Male",
+          "text": "Male"
+        },
+        {
+          "value": "Female",
+          "text": "Female"
+        },
+        {
+          "value": "Others",
+          "text": "Others"
+        }
+      ],
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "phonenumber",
+      "label": "Phone Number",
+      "value": "",
+      "type": "number",
+      "class": "col-12",
+      "placeholder": "Phone Number",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validateMobileUs"
+        }
+      ],
+      "maxlength": "20"
+    },
+    {
+      "key": "password",
+      "label": "Password",
+      "value": "",
+      "type": "password",
+      "class": "col-12",
+      "placeholder": "Password",
+      "passwordHint" : "<b>Note: </b><i>Password should have uppercase, lowercase, number and atleast one of these special characters</i><span class='hint'> ! @ # $ *</span>",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validatePasswordPattern"
+        }
+      ]
+    },
+    {
+      "key": "confirmPassword",
+      "label": "Confirm Password",
+      "value": "",
+      "type": "password",
+      "class": "col-12",
+      "placeholder": "Confirm Password",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validatePasswordPattern"
+        }
+      ]
+    },
+    {
+      "key": "addressLine1",
+      "label": "Address Line 1",
+      "value": "",
+      "type": "text",
+      "class": "col-12",
+      "placeholder": "Address Line 1",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "addressLine2",
+      "label": "Address Line 2",
+      "value": "",
+      "type": "text",
+      "class": "col-12",
+      "placeholder": "Address Line 2",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "city",
+      "label": "City ",
+      "value": "",
+      "type": "text",
+      "class": "col-12",
+      "placeholder": "City",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "state",
+      "label": "State/Province",
+      "value": "",
+      "class": "col-12",
+      "type": "select",
+      "options": [
+        {
+          "value": "",
+          "text": "--select--"
+        }
+      ],
+      "placeholder": "State/Province",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "zipcode",
+      "label": "Zip/Postal Code",
+      "value": "",
+      "type": "text",
+      "class": "col-12",
+      "placeholder": "Zip/Postal Code",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validateZipcodeUs"
+        }
+      ],
+      "maxlength": "6"
+    },
+    {
+      "key": "terms_and_conditions",
+      "label": "Terms and Conditions",
+      "class": "col-12",
+      "value": false,
+      "type": "singleCheckbox",
+      "options": {
+        "text": "I agree to the Terms and Conditions"
+      },
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "requiredTrue"
+        }
+      ]
+    }
+  ],
+  "SignUp": [
+    {
+      "key": "FormProperties",
+      "FormCaption": "SignUp",
+      "ButtonValue": "SignUp"
+    },
+    {
+      "key": "Name",
+      "label": "Full Name",
+      "class": "col-12",
+      "value": "",
+      "type": "text",
+      "placeholder": "Full Name",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ],
+      "maxlength": "100"
+    },
+    {
+      "key": "email",
+      "label": "Email",
+      "class": "col-12",
+      "value": "",
+      "type": "email",
+      "placeholder": "Email Id",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validateEmail"
+        }
+      ]
+    },
+    {
+      "key": "username",
+      "label": "Username",
+      "class": "col-12",
+      "value": "",
+      "type": "text",
+      "placeholder": "Username",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "dob",
+      "label": "Date Of Birth",
+      "class": "col-12",
+      "value": "",
+      "type": "picker",
+      "placeholder": "Date Of Birth",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "class": "col-12",
+      "value": "",
+      "type": "radio",
+      "options": [
+        {
+          "value": "Male",
+          "text": "Male"
+        },
+        {
+          "value": "Female",
+          "text": "Female"
+        },
+        {
+          "value": "Others",
+          "text": "Others"
+        }
+      ],
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "phonenumber",
+      "label": "Phone Number",
+      "value": "",
+      "class": "col-12",
+      "type": "number",
+      "placeholder": "Phone Number",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validateMobileInd"
+        }
+      ]
+    },
+    {
+      "key": "password",
+      "label": "Password",
+      "value": "",
+      "class": "col-12",
+      "type": "password",
+      "placeholder": "Password",
+      "passwordHint" : "<b>Note: </b><i>Password should have uppercase, lowercase, number and atleast one of these special characters</i><span class='hint'> ! @ # $ *</span>",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validatePasswordPattern"
+        }
+      ]
+    },
+    {
+      "key": "confirmPassword",
+      "label": "Confirm Password",
+      "value": "",
+      "type": "password",
+      "class": "col-12",
+      "placeholder": "Confirm Password",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validatePasswordPattern"
+        }
+      ]
+    },
+    {
+      "key": "terms_and_conditions",
+      "label": "Terms and Conditions",
+      "class": "col-12",
+      "value": false,
+      "type": "singleCheckbox",
+      "options": {
+        "text": "I agree to the Terms and Conditions"
+      },
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "requiredTrue"
+        }
+      ]
+    }
+  ],
+  "ForgotPassword": [
+    {
+      "key": "FormProperties",
+      "FormCaption": "ForgotPassword",
+      "ButtonValue": "Send Email"
+    },
+    {
+      "key": "username",
+      "label": "Username",
+      "value": "",
+      "type": "text",
+      "class": "col-12",
+      "placeholder": "Username",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "email",
+      "label": "Email",
+      "value": "",
+      "type": "email",
+      "class": "col-12",
+      "placeholder": "Email Id",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validateEmail"
+        }
+      ]
+    }
+  ],
+  "ResetPassword": [
+    {
+      "key": "FormProperties",
+      "FormCaption": "ResetPassword",
+      "ButtonValue": "ResetPassword"
+    },
+    {
+      "key": "email",
+      "label": "Email",
+      "value": "",
+      "type": "email",
+      "class": "col-12",
+      "placeholder": "Email Id",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validateEmail"
+        }
+      ]
+    }
+  ],
+  "changePassword": [
+    {
+      "key": "FormProperties",
+      "FormCaption": "changePassword",
+      "ButtonValue": "Confirm"
+    },
+    {
+      "key": "oldpassword",
+      "label": "Old Password",
+      "value": "",
+      "type": "password",
+      "class": "col-12",
+      "placeholder": "Old Password",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "password",
+      "label": "New Password",
+      "value": "",
+      "type": "password",
+      "class": "col-12",
+      "placeholder": "Password",
+      "passwordHint" : "<b>Note: </b><i>Password should have uppercase, lowercase, number and atleast one of these special characters</i><span class='hint'> ! @ # $ *</span>",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validatePasswordPattern"
+        }
+      ]
+    },
+    {
+      "key": "confirmPassword",
+      "label": "Confirm Password",
+      "value": "",
+      "type": "password",
+      "class": "col-12",
+      "placeholder": "Confirm Password",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validatePasswordPattern"
+        }
+      ]
+    }
+  ],
+  "loginwithemail": [
+    {
+      "key": "FormProperties",
+      "FormCaption": "Login",
+      "ButtonValue": "Login"
+    },
+    {
+      "key": "email",
+      "label": "Email",
+      "value": "",
+      "type": "email",
+      "class": "col-12",
+      "placeholder": "Email Id",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        },
+        {
+          "type": "custom",
+          "validatiors": "validateEmail"
+        }
+      ]
+    },
+    {
+      "key": "password",
+      "label": "Password",
+      "value": "",
+      "type": "password",
+      "class": "col-12",
+      "placeholder": "Password",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    }
+  ],
+  "loginwithusername": [
+    {
+      "key": "FormProperties",
+      "FormCaption": "Login",
+      "ButtonValue": "Login"
+    },
+    {
+      "key": "username",
+      "label": "Username",
+      "value": "",
+      "type": "text",
+      "class": "col-12",
+      "placeholder": "Username",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    },
+    {
+      "key": "password",
+      "label": "Password",
+      "value": "",
+      "type": "password",
+      "class": "col-12",
+      "placeholder": "Password",
+      "validation": [
+        {
+          "type": "static",
+          "validatiors": "required"
+        }
+      ]
+    }
+  ]
+}
