@@ -1,7 +1,7 @@
 <div class="card-body">
   <div class="row">
-    <div class="col-12 col-xl-6 mx-auto">
-      <h2 class="mb-4">{{ FormProperties.FormCaption }}</h2>
+    <div class="col-12 mx-auto">
+      <!-- <h2 class="mb-4">{{ FormProperties.FormCaption }}</h2> -->
       <form novalidate [formGroup]="form">
         <div class="row">
           <div *ngFor="let field of formFields" [class]="field.class">

@@ -66,6 +66,7 @@ export class FormGeneratorComponent implements OnInit {
   formvalue() {
     this.isFormSubmitted = true;
     if (this.form.valid) {
+      this.isFormSubmitted = false;
       this.getFormData.emit(this.form);
     }
   }
